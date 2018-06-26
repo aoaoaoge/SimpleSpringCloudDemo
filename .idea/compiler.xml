@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="simple-CrmConsumer-feign" />
+        <module name="simpleCrm-config-3344" />
+        <module name="simpleCrm-consumer-80" />
+        <module name="simplecrm-consumer-hystrix-dashboard" />
+        <module name="simpleCrm-eureka-7001" />
+        <module name="simpleCrm-eureka-7002" />
+        <module name="simpleCrm-provider-8001" />
+        <module name="simpleCrm-provider-8001-hystrix" />
+        <module name="simpleCrmapi" />
+        <module name="simpleCrmGateway" />
+        <module name="simpleCrmprovider8002" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

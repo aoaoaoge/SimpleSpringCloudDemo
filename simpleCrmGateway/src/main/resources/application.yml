@@ -1,0 +1,28 @@
+server:
+  port: 9527
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: gateway-9527
+  client:
+    service-url:
+     defaultZone: http://crmEureka7001.com:7002/eureka/,http://crmEureka7002.com:7002/eureka/
+
+info:
+ app.name: aoao-simpleCrm-microservicecloud
+ company.name: www.aoao.com
+ build.artifactId: ${project.artifactId}
+ info.build.version: ${project.version}
+
+#微服务名
+spring:
+  application:
+    name: microservice-zuul-gateway
+
+zuul:
+  routes:
+   myemp.serviceId: microservice-crm
+   myemp.path: /myemp/**
+  ignored-services: microservice-crm
+

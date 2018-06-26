@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link th:href="@{/webjars/bootstrap/4.1.1/css/bootstrap.css}" rel="stylesheet" type="text/css">
+</head>
+<body style="text-align: center">
+    <a th:text="${user.emp_name}"></a>
+    <table class="table table-striped">
+        <tr>
+            <th>姓名</th><th>性别</th><th>联系方式</th>
+        </tr>
+        <tr><td>[[${user.emp_name}]]</td><td>[[${user.emp_gender}]]</td><td>[[${user.emp_telphone}]]</td></tr>
+    </table>
+</body>
+<script th:src="@{/webjars/jquery/3.3.1-1/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.1.1/js/bootstrap.js}"></script>
+</html>
