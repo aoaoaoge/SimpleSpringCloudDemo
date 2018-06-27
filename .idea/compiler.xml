@@ -9,6 +9,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="simple-CrmConsumer-feign" />
         <module name="simpleCrm-config-3344" />
+        <module name="simpleCrm-config-client-3355" />
+        <module name="simpleCrm-config-eureka-7001" />
+        <module name="simpleCrm-config-provider-8001" />
         <module name="simpleCrm-consumer-80" />
         <module name="simplecrm-consumer-hystrix-dashboard" />
         <module name="simpleCrm-eureka-7001" />

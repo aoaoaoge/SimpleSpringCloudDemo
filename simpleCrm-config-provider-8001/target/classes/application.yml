@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: appliction-comfig-client-provider-8001

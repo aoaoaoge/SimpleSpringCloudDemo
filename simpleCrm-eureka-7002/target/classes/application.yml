@@ -7,5 +7,5 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-     defaultZone: http://crmEureka7001.com:7001/eureka/
+     defaultZone: http://crmEureka7002.com:7002/eureka/
 

@@ -19,6 +19,9 @@
         <module>simplecrm-consumer-hystrix-dashboard</module>
         <module>simpleCrmGateway</module>
         <module>simpleCrm-config-3344</module>
+        <module>simpleCrm-config-client-3355</module>
+        <module>simpleCrm-config-eureka-7001</module>
+        <module>simpleCrm-config-provider-8001</module>
     </modules>
     <packaging>pom</packaging>
 
