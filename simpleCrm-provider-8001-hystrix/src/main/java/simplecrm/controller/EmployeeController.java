@@ -36,6 +36,12 @@ public class EmployeeController {
         }
         return emp;
     }
+
+    /**
+     * 熔断后回调的方法
+     * @param emp_id
+     * @return
+     */
     public Employee processHystrix_Get(@PathVariable("emp_id") Integer emp_id){
         Employee employee = new Employee();
         employee.setEmp_id(emp_id);
@@ -43,6 +49,10 @@ public class EmployeeController {
         return employee;
     }
 
+    /**
+     * 服务发现
+     * @return
+     */
     @GetMapping(value = "/emp/discovery")
     public Object discovery(){
         List<String> list = discoveryClient.getServices();

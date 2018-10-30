@@ -12,7 +12,10 @@ public class CrmClientServiceFallbackFactory implements FallbackFactory<Employee
         return new EmployeeClientService() {
             @Override
             public Employee queryEmployeeById(Integer emp_id) {
-                return new Employee().setEmp_id(emp_id).setEmp_name("该ID"+emp_id+"没有对应信息，此服务已降级");
+                Employee employee = new Employee();
+                employee.setEmp_id(emp_id);
+                employee.setEmp_name("该ID"+emp_id+"没有对应信息，此服务已降级");
+                return employee;
             }
 
             @Override

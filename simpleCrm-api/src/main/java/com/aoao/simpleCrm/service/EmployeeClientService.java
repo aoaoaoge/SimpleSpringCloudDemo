@@ -10,7 +10,7 @@ import java.util.Map;
 @FeignClient(value = "MICROSERVICE-CRM",fallbackFactory = CrmClientServiceFallbackFactory.class)
 public interface EmployeeClientService {
 
-    @RequestMapping(value = "/emp/{emp_id}",method = RequestMethod.GET)
+    @GetMapping(value = "/emp/{emp_id}")
     public Employee queryEmployeeById(@PathVariable("emp_id") Integer emp_id);
 
     @PostMapping(value = "/emp/showAllemp.do")

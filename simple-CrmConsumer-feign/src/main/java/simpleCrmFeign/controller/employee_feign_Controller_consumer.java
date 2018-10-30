@@ -12,7 +12,7 @@ public class employee_feign_Controller_consumer {
     @Autowired
     public EmployeeClientService ecs;
 
-    @RequestMapping(value = "/consumer/emp/{emp_id}",method = RequestMethod.GET)
+    @GetMapping(value = "/consumer/emp/{emp_id}")
     public Employee queryEmpById(@PathVariable("emp_id") Integer emp_id){
         return  this.ecs.queryEmployeeById(emp_id);
     }

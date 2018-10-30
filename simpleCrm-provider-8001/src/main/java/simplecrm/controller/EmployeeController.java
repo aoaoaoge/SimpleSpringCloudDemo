@@ -28,7 +28,7 @@ public class EmployeeController {
         return mav;
     }*/
 
-    @RequestMapping(value = "/emp/{emp_id}", method = RequestMethod.GET)
+    @GetMapping(value = "/emp/{emp_id}")
     public Employee queryEmployeeById(@PathVariable("emp_id") Integer emp_id){
         Employee emp = ies.queryEmployeeById(emp_id);
         return emp;
