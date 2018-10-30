@@ -27,7 +27,7 @@ public class EmployeeController {
         return mav;
     }*/
 
-    @RequestMapping(value = "/emp/{emp_id}", method = RequestMethod.GET)
+    @GetMapping(value = "/emp/{emp_id}")
     @HystrixCommand(fallbackMethod = "processHystrix_Get")
     public Employee queryEmployeeById(@PathVariable("emp_id") Integer emp_id){
         Employee emp = ies.queryEmployeeById(emp_id);
@@ -37,7 +37,10 @@ public class EmployeeController {
         return emp;
     }
     public Employee processHystrix_Get(@PathVariable("emp_id") Integer emp_id){
-        return new Employee().setEmp_id(emp_id).setEmp_name("此员工ID:"+emp_id+"没有信息");
+        Employee employee = new Employee();
+        employee.setEmp_id(emp_id);
+        employee.setEmp_name("此员工ID:"+emp_id+"没有信息");
+        return employee;
     }
 
     @GetMapping(value = "/emp/discovery")
