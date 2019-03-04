@@ -7,6 +7,9 @@ import com.netflix.loadbalancer.Server;
 
 import java.util.List;
 
+/**
+负载均衡方法
+*/
 public class CustomRULE extends AbstractLoadBalancerRule {
     private int countServer=0;      //每台服务器调用次数
     private int currentIndex=0;     //当前的服务器
